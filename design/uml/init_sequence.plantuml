@@ -1,0 +1,28 @@
+@startuml
+title Linux init sequence 
+
+(*) --> "init"
+note right
+    * fork() 
+end note
+
+--> [exec() ] "/sbin/getty"
+note left
+    * wait for user
+    * read username
+end note
+
+--> [exec() ] "/bin/login"
+note left
+    * read password
+    * check password
+end note
+
+if "Valid?" then
+    --> [yes - exec()] "/bin/sh"
+    --> [exit()] "init"
+else
+    --> [no - exit()] "init" 
+endif
+
+@enduml
