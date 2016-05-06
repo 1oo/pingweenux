@@ -19,7 +19,7 @@ listed in the startup scripts.
 Here is a very simple example, that will play a sound upon starting 
 and stopping your machine:
 
-```
+```sh
 #!/bin/bash
 
 # This script is for /etc/rc.d/init.d
