@@ -1,0 +1,3 @@
+[submodule "rootfs"]
+	path = rootfs
+	url = git@github.com:1oo/pingweenux-rootfs.git
